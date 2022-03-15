@@ -11,7 +11,7 @@
 
 <body>
 
-    <div class=" webApp ">
+    <div id="webApp">
         <div class="rectangle">
             <div class="containerApp">
                 <div class="leftApp">
@@ -37,19 +37,24 @@
                         <button class="sebtn" type="button"> <i class="fa-solid fa-magnifying-glass"></i></button>
                         <input class="sebtn sein" type="text" placeholder="Cerca o inizia nuova chat">
                     </div>
+
+                    <!-- lista amici -->
+
                     <div class="friends">
-                        <div class="friend">
-                            <img class="avatar" src="img/avatar_1.jpg" alt="">
+                        <div v-for="(el, index) in boolzappList" class="friend" @click="cange">
+                            <img class="avatar" :src="boolzappList[index].avatar" alt="">
                             <div class="text">
-                                <span>nome</span>
+                                <span>{{el.user}}</span>
                                 <p class="ttxx"> ultimo messaggio alle ore </p>
                             </div>
-                            <span class="time"> 12:00 </span>
+                            <span class="time"> {{el.uTime}} </span>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="rightApp">
-                    <div class="user">
+                    <div class="user"  >
                         <img class="avatar" src="img/avatar_1.jpg" alt="">
                         <div class="text">
                             <span>nome</span>

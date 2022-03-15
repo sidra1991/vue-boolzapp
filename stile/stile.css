@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.webApp {
+#webApp {
     height: 100vh;
     width: 100vw;
     background-color: #dadbd4;
@@ -22,6 +22,7 @@
     background-color: white;
     display: flex;
     overflow: hidden;
+    border-left: 1px solid lightgray;
 }
 
 .leftApp {
