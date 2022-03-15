@@ -41,7 +41,7 @@
                     <!-- lista amici -->
 
                     <div class="friends">
-                        <div v-for="(el, index) in boolzappList" class="friend" @click="cange">
+                        <div v-for="(el, index) in boolzappList" class="friend" @click="cange(index)">
                             <img class="avatar" :src="boolzappList[index].avatar" alt="">
                             <div class="text">
                                 <span>{{el.user}}</span>
@@ -54,22 +54,24 @@
 
 
                 <div class="rightApp">
+
+                    <!-- con chi stai parlando -->
                     <div class="user"  >
-                        <img class="avatar" src="img/avatar_1.jpg" alt="">
+                        <img class="avatar" :src="boolzappList[userFocus].avatar" alt="">
                         <div class="text">
-                            <span>nome</span>
+                            <span>{{boolzappList[userFocus].user}}</span>
                             <p class="ttxx"> ultimo messaggio alle ore </p>
                         </div>
                     </div>
-                    <div class="chat">
-                        <div class="message userMessage">
-                            <span>ciucia</span>
+
+
+                    <!-- la chat -->
+                    <div class="chat" v-for="(el, index) in boolzappList" >
+                        <div class="message userMessage"  v-for="(el, index) in boolzappList[userFocus].message">
+                            <span>{{boolzappList[userFocus].message.content}}</span>
                             <div class="timeOfMessage" >12:00</div>
                         </div>
-                        <div class="message friendMessage">
-                            <span>ciucia</span>
-                            <div class="timeOfMessage" > 12:00 </div>
-                        </div>
+
                     </div>
                     <div class="chatText">
 

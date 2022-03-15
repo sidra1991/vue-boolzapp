@@ -3,6 +3,7 @@
 const app = new Vue({
     el: '#webApp',
     data:{
+        userFocus: 1,
         boolzappList:[
             {
                 id: 0,
@@ -11,13 +12,8 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        content:"hai portato giu il cane?",
-                        hours:"15:30",
-                    },
-                    {
-                        content:"ricordati di stendere i panni",
-                        hours:"15:50"
-                    },
+
+                    }
                 ],
             },
             {
@@ -26,7 +22,18 @@ const app = new Vue({
                 avatar: "img/avatar_1.jpg",
                 uTime: "12:00",
                 message: [
-                    {
+                    {   
+                        of : "my",
+                        content:"hai portato giu il cane?",
+                        hours:"15:30",
+                    },
+                    {   
+                        of : "user",
+                        content:"ricordati di stendere i panni",
+                        hours:"15:50"
+                    },
+                    {   
+                        of: "user",
                         content:"si tutto fatto",
                         hours:"16:15",
                     },
@@ -38,6 +45,7 @@ const app = new Vue({
                 avatar: `img/avatar_2.jpg`,
                 uTime: "12:00",
                 message: [
+
                     {
                         content:"",
                         hours:"",
@@ -119,8 +127,13 @@ const app = new Vue({
         ],
     },
     methods:{
-        
+        cange(index){
+            id = this.boolzappList[index].id
 
+            this.userFocus=id
 
+            console.log(this.userFocus)
+       
+        },
     },
 });
