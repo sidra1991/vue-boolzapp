@@ -1,5 +1,58 @@
-.webAp {
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.webApp {
     height: 100vh;
     width: 100vw;
-    background-color: aqua;
+    background-color: #dadbd4;
+}
+
+.rectangle{
+    background-color: #009688;
+    height: 10rem;
+    padding-top: 1rem;
+}
+
+.containerApp {
+    width: 90%;
+    height: 95vh;
+    margin-left: 5% ;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+}
+
+.leftApp {
+    width: 40%;
+    height: 100%;
+    border: 1px solid black
+}
+
+.rightApp {
+    width: 60%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+.user {
+    height: 3rem;
+    background-color: #eaeaea;
+}
+
+.blueNote {
+    height: 4rem;
+    background-color:#8edafc ;
+}
+
+.search {
+    height: 2rem;
+    background-color: #eaeaea;
+}
+
+.friends {
+    height: 80%;
+    overflow-y: scroll;
+
 }
