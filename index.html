@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="stile/stile.css">
     <meta charset="UTF-8">
@@ -7,53 +8,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>boolzapp</title>
 </head>
+
 <body>
-    
-    <div class=" webApp " >
-        <div class="rectangle" >
-            <div class="containerApp" >
-                <div class="leftApp" >
-                    <div class="user" >
 
+    <div class=" webApp ">
+        <div class="rectangle">
+            <div class="containerApp">
+                <div class="leftApp">
+                    <div class="user">
+                        <div class="userContainer">
+                            <img class="avatar" src="img/avatar_1.jpg" alt="">
+                            <span>username</span>
+                        </div>
+                        <div class="funControl">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
                     </div>
-                    <div class="blueNote" >
-
+                    <div class="blueNote">
+                        <i class="fa-solid fa-bell-slash camp"></i>
+                        <div>
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#">Attiva notifiche desktop</a>
+                        </div>
                     </div>
-                    <div class="search" >
-
+                    <div class="search">
+                        <button class="sebtn" type="button"> <i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input class="sebtn sein" type="text" placeholder="Cerca o inizia nuova chat">
                     </div>
-                    <div class="friends" >
-                        <div class="friend" >
-
+                    <div class="friends">
+                        <div class="friend">
+                            <img class="avatar" src="img/avatar_1.jpg" alt="">
+                            <div class="text">
+                                <span>nome</span>
+                                <p class="ttxx"> ultimo messaggio alle ore </p>
+                            </div>
+                            <span class="time"> 12:00 </span>
                         </div>
                     </div>
                 </div>
-                <div class="rightApp" >
-                    <div class="user" >
-
-                    </div>
-                    <div class="chat" >
-                        <div class="userMessage" >
-                            <span>ciucia
-                            </span>
-                        </div>
-                        <div class="friendMessage" >
-
+                <div class="rightApp">
+                    <div class="user">
+                        <img class="avatar" src="img/avatar_1.jpg" alt="">
+                        <div class="text">
+                            <span>nome</span>
+                            <p class="ttxx"> ultimo messaggio alle ore </p>
                         </div>
                     </div>
-                    <div class="chatText" >
+                    <div class="chat">
+                        <div class="message userMessage">
+                            <span>ciucia</span>
+                            <div class="timeOfMessage" >12:00</div>
+                        </div>
+                        <div class="message friendMessage">
+                            <span>ciucia</span>
+                            <div class="timeOfMessage" > 12:00 </div>
+                        </div>
+                    </div>
+                    <div class="chatText">
 
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
 
 
 
-    <script src="https://kit.fontawesome.com/ed447ef359.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ca36ef870f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="stile/script.js"></script>
 </body>
+
 </html>

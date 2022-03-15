@@ -27,28 +27,34 @@
 .leftApp {
     width: 40%;
     height: 100%;
-    border: 1px solid black
 }
 
 .rightApp {
     width: 60%;
     height: 100%;
-    border: 1px solid black;
 }
 
 .user {
-    height: 3rem;
+    height: 4rem;
     background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 1px solid #d6d6d6;
 }
 
 .blueNote {
     height: 4rem;
     background-color:#8edafc ;
+    display: flex;
+    align-items: center;
 }
 
 .search {
     height: 2rem;
     background-color: #eaeaea;
+    display: flex;
+    align-items: center;
 }
 
 .friends {
@@ -72,25 +78,108 @@
 .friend {
     height: 4rem;
     border-bottom: 1px solid #f3eeea;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .friend:hover {
     background-color: #e9ebeb;
 }
 
-.userMessage {
+.message{
     min-width: 7rem;
     max-width: 17rem;
+    border-radius: 10px;
+    margin-top: 10px;
     padding-left: 1rem;
+}
+
+.userMessage {
+
     margin-left: 50%;
     background-color:#d5f9ba ;
-    border-radius: 10px;
 }
 
 .friendMessage {
-    min-width: 7rem;
-    max-width: 17rem;
     margin-left: 3rem;
     background-color:#ffffff ;
-    border-radius: 10px;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+}
+
+.userContainer {
+    display: flex;
+    align-items: center;
+}
+
+.funControl {
+    display: flex;
+    align-items: center;
+}
+
+.funControl *{
+    width: 1.5rem;
+    color: #b1b1b1;
+}
+
+.text {
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.camp {
+    margin-left: 1rem;
+    font-size:  2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #f2fbff;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: center;
+    padding-top: 0.5rem;
+    color: #8edafc;
+
+}
+
+a {
+    color: #5d74a4;
+}
+
+.ttxx{
+    color:#b6b9bb;
+}
+
+.time {
+    align-self: flex-start;
+    color: #b6b9bb;
+    position: relative;
+    justify-self: end;
+}
+
+.sebtn {
+    margin-right: 0;
+    margin-left: 1rem;
+    margin-top: 5px;
+    background-color: #ffffff;
+    width: 2rem;
+    border:transparent;
+}
+
+.sein {
+    margin-left: 0;
+    margin-right: 10px;
+    width: 100%;
+}
+
+.timeOfMessage {
+    color: lightgrey;
+    text-align: end;
+    font-size: 0.5rem;
+    padding-right: 10px;
 }
