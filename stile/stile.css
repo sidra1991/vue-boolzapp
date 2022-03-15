@@ -54,5 +54,43 @@
 .friends {
     height: 80%;
     overflow-y: scroll;
+}
 
+.chat{
+    height: 82%;
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
+    overflow-y: scroll;
+}
+
+.chatText {
+    background-color: #f3eeea;
+    height: 3rem;
+
+}
+
+.friend {
+    height: 4rem;
+    border-bottom: 1px solid #f3eeea;
+}
+
+.friend:hover {
+    background-color: #e9ebeb;
+}
+
+.userMessage {
+    min-width: 7rem;
+    max-width: 17rem;
+    padding-left: 1rem;
+    margin-left: 50%;
+    background-color:#d5f9ba ;
+    border-radius: 10px;
+}
+
+.friendMessage {
+    min-width: 7rem;
+    max-width: 17rem;
+    margin-left: 3rem;
+    background-color:#ffffff ;
+    border-radius: 10px;
 }
