@@ -33,9 +33,12 @@
                             <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </div>
+
+                    <!-- il motore di ricerca -->
+
                     <div class="search">
-                        <button class="sebtn" type="button"> <i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input class="sebtn sein" type="text" placeholder="Cerca o inizia nuova chat">
+                        <button class="sebtn" type="button" @click="wanthed"  > <i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input @keyup.enter="wanted" class="sebtn sein" v-model="follow" type="text" placeholder="Cerca o inizia nuova chat">
                     </div>
 
                     <!-- lista amici -->
@@ -84,6 +87,19 @@
 
             </div>
         </div>
+
+        <div class="proSearch" >
+            <ul >
+                <li class="ric">
+                    <span>risultati per:</span><span>{{follow}}</span>
+                </li>
+                <li v-for="el in rise" class="ric" >
+                    <img :src="el.avatar" alt=""> <span>{{el.user}}</span>
+                </li>
+            </ul>
+        </div>
+    
+    
     </div>
 
 

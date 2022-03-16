@@ -186,3 +186,27 @@ a {
     font-size: 0.5rem;
     padding-right: 10px;
 }
+
+.proSearch {
+    margin-top: 30rem;
+    margin-left: 5rem;
+    height: 5rem;
+    width: 10rem;
+    border: 1px solid black;
+}
+
+.proSearch ul {
+    padding-left: 0;
+}
+
+.ric {
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    list-style: none ;
+}
+
+.ric img {
+    width: 20px;
+}
