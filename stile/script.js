@@ -23,17 +23,17 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {   
-                        of : "my",
+                        of : "userMessage",
                         content:"hai portato giu il cane?",
                         hours:"15:30",
                     },
                     {   
-                        of : "user",
+                        of : "userMessage",
                         content:"ricordati di stendere i panni",
                         hours:"15:50"
                     },
                     {   
-                        of: "user",
+                        of: "friendMessage",
                         content:"si tutto fatto",
                         hours:"16:15",
                     },

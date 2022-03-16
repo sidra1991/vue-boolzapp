@@ -67,9 +67,11 @@
 
                     <!-- la chat -->
                     <div class="chat" v-for="(el, index) in boolzappList" >
-                        <div class="message userMessage"  v-for="(el, index) in boolzappList[userFocus].message">
-                            <span>{{el.content}}</span>
-                            <div class="timeOfMessage" >12:00</div>
+                        <div v-for="(el, index) in boolzappList[userFocus].message">
+                            <div class="message" :class=" el.of" >
+                                <span>{{el.content}}</span>
+                                <div class="timeOfMessage" >12:00</div>
+                            </div> 
                         </div>
 
                     </div>
