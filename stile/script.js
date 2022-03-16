@@ -4,6 +4,8 @@ const app = new Vue({
     el: '#webApp',
     data:{
         userFocus: 1,
+        answersRandom:[ "immagino","non ti conosco","perche mi parli","vai via","sei malvagio","piace anche a me","non saprei","che bella la vita","sono triste","so dove vivi","immaginavo che lo sapevi","si rispondo a caso","vivi la vida loca","i faggioli puzzano","non lo farò mai",],
+        answers:'',
         boolzappList:[
             {
                 id: 0,
@@ -143,7 +145,8 @@ const app = new Vue({
        
         },
         textMessage(userFocus) {
-            
+
+
             point = this.boolzappList[userFocus].message;
             textOf = "userMessage";
             content = this.textToText;
@@ -156,6 +159,27 @@ const app = new Vue({
             console.log(content)
             console.log(hours)
             console.log(point)
-        }
+            console.log(random)
+            console.log(answersRandom)
+        },
+
+        answersRandomFunction(userFocus){
+            point = this.boolzappList[userFocus].message;
+            answersRandomSea = this.answersRandom.length
+            random = Math.floor(Math.random() * answersRandomSea)
+            answers = this.answersRandom[random]
+            textOf = "friendMessage";
+            content = answers;
+            hours="12:00";
+            point.push({ textOf,content,hours });
+            console.log(textOf)
+            console.log(content)
+            console.log(hours)
+            console.log(point)
+            console.log(random)
+            console.log(answersRandom)
+        },
+
+
     },
 });
