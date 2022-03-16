@@ -146,40 +146,36 @@ const app = new Vue({
         },
         textMessage(userFocus) {
 
-
             point = this.boolzappList[userFocus].message;
             textOf = "userMessage";
             content = this.textToText;
-            hours="12:00";
+            hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
             if (content != "") {
                 point.push({ textOf,content,hours });
                 this.textToText = '';
+                this.answersRandomFunction()
             }
-            console.log(textOf)
-            console.log(content)
             console.log(hours)
-            console.log(point)
-            console.log(random)
-            console.log(answersRandom)
         },
 
-        answersRandomFunction(userFocus){
-            point = this.boolzappList[userFocus].message;
+        answersRandomFunction(){
             answersRandomSea = this.answersRandom.length
             random = Math.floor(Math.random() * answersRandomSea)
             answers = this.answersRandom[random]
+
+            setTimeout(this.reply,2000)
+        },
+        reply() {
             textOf = "friendMessage";
             content = answers;
-            hours="12:00";
+            hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
             point.push({ textOf,content,hours });
-            console.log(textOf)
-            console.log(content)
-            console.log(hours)
-            console.log(point)
-            console.log(random)
-            console.log(answersRandom)
         },
-
-
     },
 });
+
+// const dt = DateTime.local();
+// const now = DateTime.now();
+
+// console.log(dt)
+// console.log(now)
