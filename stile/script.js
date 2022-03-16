@@ -47,6 +47,7 @@ const app = new Vue({
                 message: [
 
                     {
+                        of:"",
                         content:"",
                         hours:"",
                     },
@@ -59,6 +60,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
+                        of:"",
                         content:"",
                         hours:"",
                     },
@@ -71,6 +73,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
+                        of:"",
                         content:"",
                         hours:"",
                     },
@@ -83,6 +86,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
+                        of:"",
                         content:"",
                         hours:"",
                     },
@@ -95,6 +99,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
+                        of:"",
                         content:"",
                         hours:"",
                     },
@@ -107,6 +112,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
+                        of:"",
                         content:"",
                         hours:"",
                     },
@@ -119,6 +125,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
+                        of:"",
                         content:"",
                         hours:"",
                     },
