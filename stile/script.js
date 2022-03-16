@@ -23,17 +23,17 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {   
-                        of : "userMessage",
+                        textOf : "userMessage",
                         content:"hai portato giu il cane?",
                         hours:"15:30",
                     },
                     {   
-                        of : "userMessage",
+                        textOf : "userMessage",
                         content:"ricordati di stendere i panni",
                         hours:"15:50"
                     },
                     {   
-                        of: "friendMessage",
+                        textOf: "friendMessage",
                         content:"si tutto fatto",
                         hours:"16:15",
                     },
@@ -47,7 +47,7 @@ const app = new Vue({
                 message: [
 
                     {
-                        of:"",
+                        textOf:"",
                         content:"",
                         hours:"",
                     },
@@ -60,7 +60,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        of:"",
+                        textOf:"",
                         content:"",
                         hours:"",
                     },
@@ -73,7 +73,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        of:"",
+                        textOf:"",
                         content:"",
                         hours:"",
                     },
@@ -86,7 +86,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        of:"",
+                        textOf:"",
                         content:"",
                         hours:"",
                     },
@@ -99,7 +99,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        of:"",
+                        textOf:"",
                         content:"",
                         hours:"",
                     },
@@ -112,7 +112,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        of:"",
+                        textOf:"",
                         content:"",
                         hours:"",
                     },
@@ -125,7 +125,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        of:"",
+                        textOf:"",
                         content:"",
                         hours:"",
                     },
@@ -142,5 +142,20 @@ const app = new Vue({
             console.log(this.userFocus)
        
         },
+        textMessage(userFocus) {
+            
+            point = this.boolzappList[userFocus].message;
+            textOf = "userMessage";
+            content = this.textToText;
+            hours="12:00";
+            if (content != "") {
+                point.push({ textOf,content,hours });
+                this.textToText = '';
+            }
+            console.log(textOf)
+            console.log(content)
+            console.log(hours)
+            console.log(point)
+        }
     },
 });
