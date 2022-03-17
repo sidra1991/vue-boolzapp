@@ -62,7 +62,7 @@
                         <img class="avatar" :src="boolzappList[userFocus].avatar" alt="">
                         <div class="text">
                             <span>{{boolzappList[userFocus].user}}</span>
-                            <p class="ttxx"> ultimo messaggio alle ore {{el.message[message.length-1].hours}}</p>
+                            <p class="ttxx"> ultimo messaggio alle ore</p>
                         </div>
                     </div>
 
@@ -82,7 +82,7 @@
                                         <span> info messagio</span>
                                     </div>
                                     <div class="mFdivisor" >
-                                        <button class="mFBTN" type="button" @click="deletetMessage(el)"> elimina messaggio </button>
+                                        <button class="mFBTN" type="button" @click="deletetMessage(index)"> elimina messaggio </button>
                                     </div>
                                 </div>
                             </div> 

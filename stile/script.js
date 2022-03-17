@@ -141,9 +141,10 @@ const app = new Vue({
             textOf = "userMessage";
             content = this.textToText;
             menu = true
-            hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
+            hoursComplete= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
+            hours=luxon.DateTime.now().toFormat(`HH:mm:ss`);
             if (content != "") {
-                point.push({ textOf,content,hours,menu });
+                point.push({ textOf,content,hours,menu,hoursComplete });
                 this.textToText = '';
                 this.answersRandomFunction()
             }
@@ -161,14 +162,20 @@ const app = new Vue({
             textOf = "friendMessage";
             content = answers;
             menu = true
-            hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
-            point.push({ textOf,content,hours,menu });
+            hoursComplete= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
+            hours=luxon.DateTime.now().toFormat(`HH:mm:ss`);
+            point.push({ textOf,content,hours,menu,hoursComplete });
         },
 
         openMenu(el) {
             el.menu = ! el.menu
         },
-
+        deletetMessage(index,userFocus) {
+            this.boolzappList[this.userFocus].message.pop(index,1)
+            console.log(this.userFocus)
+            console.log(index)
+            console.log(this.boolzappList[userFocus].message[index])
+        }
     },
 });
 
