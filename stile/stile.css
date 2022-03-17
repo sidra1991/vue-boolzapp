@@ -191,15 +191,11 @@ a {
     padding-right: 10px;
 }
 
-.dNone {
-    display: none;
-
-}
-
 .special-alngle {
     position: absolute;
     right:10px;
     z-index: 3;
+    padding: 0.2rem;
 }
 
 .messageFunction {
@@ -208,10 +204,6 @@ a {
     z-index: 2;
     right: 0;
     top: 0;
-}
-
-.ddNone {
-    display: none;
 }
 
 .mFdivisor {
@@ -227,13 +219,6 @@ a {
     height: 100%;
     border: none;
     background-color: transparent;
-}
-
-.special-alngle-close {
-    position: absolute;
-    left: 100%;
-    padding: 0.5rem;
-    background-color: white;
 }
 
 .mFdivisor:hover {

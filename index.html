@@ -42,8 +42,7 @@
 
                     <div class="friends">
                         <template v-for="(el, index) in boolzappList" >
-                            <!-- <div v-if=" ( this.inpSearch != '' || !boolzappList.indexOf(this.inpSearch)) dNone  "  > -->
-                            <div class="friend" @click="cange(index)">
+                            <div v-if="el.user.includes(inpSearch)" class="friend" @click="cange(index)" >
                                 <img class="avatar" :src="boolzappList[index].avatar" alt="">
                                 <div class="text">
                                     <span>{{el.user}}</span>
@@ -72,10 +71,11 @@
                     <div class="chat" >
                         <div v-for="(el, index) in boolzappList[userFocus].message">
                             <div class="message" :class=" el.textOf" >
-                                <i class="fa-solid fa-angle-down special-alngle " @click="openMenu(menu)"></i>
+                                <i class="fa-solid fa-angle-down special-alngle " @click="openMenu(el)"></i>
                                 <span>{{el.content}}</span>
                                 <div class="timeOfMessage" >{{el.hours}}</div>
-                                <div class="messageFunction" :class="menu">
+
+                                <div class="messageFunction" v-if="el.menu == false">
 
                                     <div class="mFdivisor" > 
                                         <span> info messagio</span>

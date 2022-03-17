@@ -29,16 +29,19 @@ const app = new Vue({
                         textOf : "userMessage",
                         content:"hai portato giu il cane?",
                         hours:"15:30",
+                        menu : true,
                     },
                     {   
                         textOf : "userMessage",
                         content:"ricordati di stendere i panni",
-                        hours:"15:50"
+                        hours:"15:50",
+                        menu : true,
                     },
                     {   
                         textOf: "friendMessage",
                         content:"si tutto fatto",
                         hours:"16:15",
+                        menu : true,
                     },
                 ],    
             },
@@ -50,9 +53,7 @@ const app = new Vue({
                 message: [
 
                     {
-                        textOf:"",
-                        content:"",
-                        hours:"",
+
                     },
                 ],    
             },
@@ -63,9 +64,8 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        textOf:"",
-                        content:"",
-                        hours:"",
+
+
                     },
                 ],    
             },
@@ -76,9 +76,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        textOf:"",
-                        content:"",
-                        hours:"",
+
                     },
                 ],    
             },
@@ -89,9 +87,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        textOf:"",
-                        content:"",
-                        hours:"",
+
                     },
                 ],    
             },
@@ -102,9 +98,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        textOf:"",
-                        content:"",
-                        hours:"",
+
                     },
                 ],    
             },
@@ -115,9 +109,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        textOf:"",
-                        content:"",
-                        hours:"",
+
                     },
                 ],    
             },
@@ -128,9 +120,7 @@ const app = new Vue({
                 uTime: "12:00",
                 message: [
                     {
-                        textOf:"",
-                        content:"",
-                        hours:"",
+
                     },
                 ],    
             },
@@ -150,9 +140,10 @@ const app = new Vue({
             point = this.boolzappList[userFocus].message;
             textOf = "userMessage";
             content = this.textToText;
+            menu = true
             hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
             if (content != "") {
-                point.push({ textOf,content,hours });
+                point.push({ textOf,content,hours,menu });
                 this.textToText = '';
                 this.answersRandomFunction()
             }
@@ -169,22 +160,13 @@ const app = new Vue({
         reply() {
             textOf = "friendMessage";
             content = answers;
+            menu = true
             hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
-            point.push({ textOf,content,hours });
+            point.push({ textOf,content,hours,menu });
         },
 
-        openMenu(menu) {
-            menu = ".ddNone"
-
-            if (interructor != "") {
-                menu = ""
-            } else {
-                menu = ".ddNone"
-            };
-
-            
-            return
-
+        openMenu(el) {
+            el.menu = ! el.menu
         }
 
     },
