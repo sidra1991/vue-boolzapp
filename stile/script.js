@@ -7,6 +7,7 @@ const app = new Vue({
         answersRandom:[ "immagino","non ti conosco","perche mi parli","vai via","sei malvagio","piace anche a me","non saprei","che bella la vita","sono triste","so dove vivi","immaginavo che lo sapevi","si rispondo a caso","vivi la vida loca","i faggioli puzzano","non lo farò mai",],
         answers:'',
         inpSearch:'',
+        textToText:'',
         boolzappList:[
             {
                 id: 0,

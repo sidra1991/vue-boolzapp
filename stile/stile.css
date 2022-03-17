@@ -228,3 +228,13 @@ a {
 .airplane{
     width: 250px;
 }
+
+.plane{
+    background-color:  lightgray;
+    border-radius: 50% ;
+    padding: 5px;
+}
+
+.plane:hover {
+    color: blue;
+}
