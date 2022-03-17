@@ -73,14 +73,14 @@
                         <div v-for="(el, index) in boolzappList[userFocus].message">
                             <div class="message" :class=" el.textOf" >
                                 <span>{{el.content}}</span>
-                                <div class="timeOfMessage" >{{el.hours}}</div>
+                                <div class="timeOfMessage" >12:00</div>
                             </div> 
                         </div>
 
                     </div>
                     <div class="chatText">
                         <i class="fa-regular fa-face-smile"></i>
-                        <input :id="textToText" v-model="textToText" type="text" @keyup.enter="textMessage(userFocus)"   >
+                        <input id="textToText" v-model="textToText" type="text" @keyup.enter="textMessage(userFocus)"  @keyup.f="answersRandomFunction(userFocus)" >
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
     </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.1/build/global/luxon.min.js"></script>
+
     <script src="https://kit.fontawesome.com/ca36ef870f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="stile/script.js"></script>
