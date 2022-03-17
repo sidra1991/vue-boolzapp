@@ -35,20 +35,23 @@
                     </div>
                     <div class="search">
                         <button class="sebtn" type="button"> <i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input class="sebtn sein" type="text" placeholder="Cerca o inizia nuova chat">
+                        <input class="sebtn sein" type="text" placeholder="Cerca o inizia nuova chat" v-model="inpSearch">
                     </div>
 
                     <!-- lista amici -->
 
                     <div class="friends">
-                        <div v-for="(el, index) in boolzappList" class="friend" @click="cange(index)">
-                            <img class="avatar" :src="boolzappList[index].avatar" alt="">
-                            <div class="text">
-                                <span>{{el.user}}</span>
-                                <p class="ttxx"> ultimo messaggio alle ore </p>
+                        <template v-for="(el, index) in boolzappList" >
+                            <!-- <div v-if=" ( this.inpSearch != '' || !boolzappList.indexOf(this.inpSearch)) dNone  "  > -->
+                            <div class="friend" @click="cange(index)">
+                                <img class="avatar" :src="boolzappList[index].avatar" alt="">
+                                <div class="text">
+                                    <span>{{el.user}}</span>
+                                    <p class="ttxx"> ultimo messaggio alle ore </p>
+                                </div>
+                                <span class="time"> {{el.uTime}} </span>
                             </div>
-                            <span class="time"> {{el.uTime}} </span>
-                        </div>
+                        </template>
                     </div>
                 </div>
 
@@ -69,8 +72,18 @@
                     <div class="chat" >
                         <div v-for="(el, index) in boolzappList[userFocus].message">
                             <div class="message" :class=" el.textOf" >
+                                <i class="fa-solid fa-angle-down special-alngle " @click="openMenu(menu)"></i>
                                 <span>{{el.content}}</span>
                                 <div class="timeOfMessage" >{{el.hours}}</div>
+                                <div class="messageFunction" :class="menu">
+
+                                    <div class="mFdivisor" > 
+                                        <span> info messagio</span>
+                                    </div>
+                                    <div class="mFdivisor" >
+                                        <button class="mFBTN" type="button" @click="deletetMessage(el)"> elimina messaggio </button>
+                                    </div>
+                                </div>
                             </div> 
                         </div>
 

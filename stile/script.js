@@ -6,6 +6,7 @@ const app = new Vue({
         userFocus: 1,
         answersRandom:[ "immagino","non ti conosco","perche mi parli","vai via","sei malvagio","piace anche a me","non saprei","che bella la vita","sono triste","so dove vivi","immaginavo che lo sapevi","si rispondo a caso","vivi la vida loca","i faggioli puzzano","non lo farò mai",],
         answers:'',
+        inpSearch:'',
         boolzappList:[
             {
                 id: 0,
@@ -171,6 +172,21 @@ const app = new Vue({
             hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
             point.push({ textOf,content,hours });
         },
+
+        openMenu(menu) {
+            menu = ".ddNone"
+
+            if (interructor != "") {
+                menu = ""
+            } else {
+                menu = ".ddNone"
+            };
+
+            
+            return
+
+        }
+
     },
 });
 
