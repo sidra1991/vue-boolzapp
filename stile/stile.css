@@ -64,7 +64,7 @@
 }
 
 .chat{
-    height: 82%;
+    height: 80%;
     background-image: url(../img/mine.jpg);
     background-size: contain;
     overflow-y: scroll;
@@ -223,4 +223,8 @@ a {
 
 .mFdivisor:hover {
     background-color: lightgray;
+}
+
+.airplane{
+    width: 250px;
 }

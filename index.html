@@ -91,7 +91,10 @@
                     </div>
                     <div class="chatText">
                         <i class="fa-regular fa-face-smile"></i>
-                        <input :id="textToText" v-model="textToText" type="text" @keyup.enter="textMessage(userFocus)"   >
+                        <div class="airplane" >
+                            <input v-model="textToText" type="text" @keyup.enter="textMessage(userFocus)"   >
+                            <i class="fa-solid fa-paper-plane" v-if=" (textToText == '') ==true  " ></i>
+                        </div>
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
