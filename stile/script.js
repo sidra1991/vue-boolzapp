@@ -152,8 +152,7 @@ const app = new Vue({
        
         },
         textMessage(userFocus) {
-
-
+            
             point = this.boolzappList[userFocus].message;
             textOf = "userMessage";
             content = this.textToText;
@@ -166,27 +165,6 @@ const app = new Vue({
             console.log(content)
             console.log(hours)
             console.log(point)
-            console.log(random)
-            console.log(answersRandom)
-        },
-
-        answersRandomFunction(userFocus){
-            point = this.boolzappList[userFocus].message;
-            answersRandomSea = this.answersRandom.length
-            random = Math.floor(Math.random() * answersRandomSea)
-            answers = this.answersRandom[random]
-            textOf = "friendMessage";
-            content = answers;
-            hours="12:00";
-            point.push({ textOf,content,hours });
-            console.log(textOf)
-            console.log(content)
-            console.log(hours)
-            console.log(point)
-            console.log(random)
-            console.log(answersRandom)
-        },
-
-
+        }
     },
 });
