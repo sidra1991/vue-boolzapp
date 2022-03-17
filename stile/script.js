@@ -12,6 +12,7 @@ const app = new Vue({
             {
             }
         ],
+        boolzappListFilter:[],
         boolzappList:[
             {
                 id: 0,
@@ -143,7 +144,7 @@ const app = new Vue({
     },
     methods:{
         cange(index){
-            id = this.boolzappList[index].id
+            id = this.boolzappListFilter[index].id
 
             this.userFocus=id
 
@@ -152,7 +153,7 @@ const app = new Vue({
         },
         textMessage(userFocus) {
 
-            point = this.boolzappList[userFocus].message;
+            point = this.boolzappListFilter[userFocus].message;
             textOf = "userMessage";
             content = this.textToText;
             hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
@@ -177,22 +178,21 @@ const app = new Vue({
             hours= luxon.DateTime.now().toFormat(`DD/MM/yyyy HH:mm:ss`);
             point.push({ textOf,content,hours });
         },
-        wanthed(){
-            search = this.follow;
-            
-            for (let i = 0; i < boolzappList.length; i++) {
-                if (this.boolzappList.user.indexOf(search)) {
-                    this.rise.push(
-                    this.boolzappList[i].user,
-                    this.boolzappList[i].avatar,
-                    
-                    )
-                };
-                
-            };  
-            console.log(this.rise)
-            console.log(this.cosa)
-            console.log(this.search)
-        }
+        
+        // wanted(follow) {
+        //     const boolzappList = this.boolzappList;
+        //     const boolzappListFilter = this.boolzappListFilter;
+           
+
+        //     for (let i = 0; i < boolzappList.length; i++) {
+        //         if (boolzappList[i].user.indexOf(follow) == true ) {
+        //             boolzappListFilter.push(boolzappList[i])
+        //         } 
+        //     }
+        //     console.log(boolzappList)
+        //     console.log(boolzappListFilter)
+        //     console.log(follow)
+
+        // }
     },
 });
