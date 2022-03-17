@@ -33,12 +33,9 @@
                             <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </div>
-
-                    <!-- il motore di ricerca -->
-
                     <div class="search">
-                        <button class="sebtn" type="button" @click="wanthed"  > <i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input @keyup.enter="wanted" class="sebtn sein" v-model="follow" type="text" placeholder="Cerca o inizia nuova chat">
+                        <button class="sebtn" type="button"> <i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input class="sebtn sein" type="text" placeholder="Cerca o inizia nuova chat">
                     </div>
 
                     <!-- lista amici -->
@@ -73,37 +70,24 @@
                         <div v-for="(el, index) in boolzappList[userFocus].message">
                             <div class="message" :class=" el.textOf" >
                                 <span>{{el.content}}</span>
-                                <div class="timeOfMessage" >12:00</div>
+                                <div class="timeOfMessage" >{{el.hours}}</div>
                             </div> 
                         </div>
 
                     </div>
                     <div class="chatText">
                         <i class="fa-regular fa-face-smile"></i>
-                        <input id="textToText" v-model="textToText" type="text" @keyup.enter="textMessage(userFocus)" >
+                        <input :id="textToText" v-model="textToText" type="text" @keyup.enter="textMessage(userFocus)"   >
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
 
             </div>
         </div>
-
-        <div class="proSearch" >
-            <ul >
-                <li class="ric">
-                    <span>risultati per:</span><span>{{follow}}</span>
-                </li>
-                <li v-for="el in rise" class="ric" >
-                    <img :src="el.avatar" alt=""> <span>{{el.user}}</span>
-                </li>
-            </ul>
-        </div>
-    
-    
     </div>
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.1/build/global/luxon.min.js"></script>
     <script src="https://kit.fontawesome.com/ca36ef870f.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="stile/script.js"></script>
