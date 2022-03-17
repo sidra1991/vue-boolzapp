@@ -167,7 +167,7 @@ const app = new Vue({
 
         openMenu(el) {
             el.menu = ! el.menu
-        }
+        },
 
     },
 });

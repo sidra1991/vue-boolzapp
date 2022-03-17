@@ -46,7 +46,7 @@
                                 <img class="avatar" :src="boolzappList[index].avatar" alt="">
                                 <div class="text">
                                     <span>{{el.user}}</span>
-                                    <p class="ttxx"> ultimo messaggio alle ore </p>
+                                    <p class="ttxx"> ultimo messaggio alle ore  </p>
                                 </div>
                                 <span class="time"> {{el.uTime}} </span>
                             </div>
@@ -62,7 +62,7 @@
                         <img class="avatar" :src="boolzappList[userFocus].avatar" alt="">
                         <div class="text">
                             <span>{{boolzappList[userFocus].user}}</span>
-                            <p class="ttxx"> ultimo messaggio alle ore </p>
+                            <p class="ttxx"> ultimo messaggio alle ore {{el.message[message.length-1].hours}}</p>
                         </div>
                     </div>
 
@@ -71,7 +71,8 @@
                     <div class="chat" >
                         <div v-for="(el, index) in boolzappList[userFocus].message">
                             <div class="message" :class=" el.textOf" >
-                                <i class="fa-solid fa-angle-down special-alngle " @click="openMenu(el)"></i>
+                                <i class="fa-solid fa-angle-down special-alngle " v-if="el.menu == true" @click="openMenu(el)"></i>
+                                <i class="fa-solid fa-angle-up special-alngle " v-if="el.menu == false" @click="openMenu(el)"></i>
                                 <span>{{el.content}}</span>
                                 <div class="timeOfMessage" >{{el.hours}}</div>
 
