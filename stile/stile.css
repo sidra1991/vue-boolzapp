@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
 }
+/* contenitore base */
+/* ---------------- */
 
 #webApp {
     height: 100vh;
@@ -15,6 +17,9 @@
     padding-top: 1rem;
 }
 
+/* contenitore app */
+/* --------------- */
+
 .containerApp {
     width: 90%;
     height: 95vh;
@@ -23,16 +28,6 @@
     display: flex;
     overflow: hidden;
     border-left: 1px solid lightgray;
-}
-
-.leftApp {
-    width: 40%;
-    height: 100%;
-}
-
-.rightApp {
-    width: 60%;
-    height: 100%;
 }
 
 .user {
@@ -44,6 +39,16 @@
     border-right: 1px solid #d6d6d6;
 }
 
+
+/* contenitore sinistro della app */
+/* ------------------------------ */
+
+.leftApp {
+    width: 40%;
+    height: 100%;
+}
+
+/* avviso */
 .blueNote {
     height: 4rem;
     background-color:#8edafc ;
@@ -51,6 +56,24 @@
     align-items: center;
 }
 
+.camp {
+    margin-left: 1rem;
+    font-size:  2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #f2fbff;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: center;
+    padding-top: 0.5rem;
+    color: #8edafc;
+}
+
+a {
+    color: #5d74a4;
+}
+
+/* motore di ricerca */
 .search {
     height: 2rem;
     background-color: #eaeaea;
@@ -58,11 +81,73 @@
     align-items: center;
 }
 
+.sebtn {
+    margin-right: 0;
+    margin-left: 1rem;
+    margin-top: 5px;
+    background-color: #ffffff;
+    width: 2rem;
+    border:transparent;
+}
+
+.sein {
+    margin-left: 0;
+    margin-right: 10px;
+    width: 100%;
+}
+
+/* lista contatti */
 .friends {
     height: 80%;
     overflow-y: scroll;
 }
 
+.friend {
+    height: 4rem;
+    border-bottom: 1px solid #f3eeea;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.friend:hover {
+    background-color: #e9ebeb;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 1rem;
+}
+
+.userContainer {
+    display: flex;
+    align-items: center;
+}
+
+.ttxx{
+    color:#b6b9bb;
+}
+
+.time {
+    align-self: flex-start;
+    color: #b6b9bb;
+    position: relative;
+    justify-self: end;
+}
+
+
+/* contenitore destro della app */
+/* ---------------------------- */
+
+
+.rightApp {
+    width: 60%;
+    height: 100%;
+}
+
+/* chat */
 .chat{
     height: 80%;
     background-image: url(../img/mine.jpg);
@@ -78,16 +163,18 @@
     justify-content: space-around;
 }
 
-.friend {
-    height: 4rem;
-    border-bottom: 1px solid #f3eeea;
-    display: flex;
-    align-items: center;
-    width: 100%;
+.timeOfMessage {
+    color: lightgrey;
+    text-align: end;
+    font-size: 0.5rem;
+    padding-right: 10px;
 }
 
-.friend:hover {
-    background-color: #e9ebeb;
+.special-alngle {
+    position: absolute;
+    right:10px;
+    z-index: 3;
+    padding: 0.2rem;
 }
 
 .message{
@@ -113,89 +200,9 @@
     background-color:#ffffff ;
 }
 
-.avatar {
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
-    margin-left: 1rem;
-}
-
-.userContainer {
-    display: flex;
-    align-items: center;
-}
-
 .funControl {
     display: flex;
     align-items: center;
-}
-
-.funControl *{
-    width: 1.5rem;
-    color: #b1b1b1;
-}
-
-.text {
-    margin-left: 1rem;
-    width: 100%;
-}
-
-.camp {
-    margin-left: 1rem;
-    font-size:  2rem;
-    width: 3rem;
-    height: 3rem;
-    background-color: #f2fbff;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: center;
-    padding-top: 0.5rem;
-    color: #8edafc;
-
-}
-
-a {
-    color: #5d74a4;
-}
-
-.ttxx{
-    color:#b6b9bb;
-}
-
-.time {
-    align-self: flex-start;
-    color: #b6b9bb;
-    position: relative;
-    justify-self: end;
-}
-
-.sebtn {
-    margin-right: 0;
-    margin-left: 1rem;
-    margin-top: 5px;
-    background-color: #ffffff;
-    width: 2rem;
-    border:transparent;
-}
-
-.sein {
-    margin-left: 0;
-    margin-right: 10px;
-    width: 100%;
-}
-
-.timeOfMessage {
-    color: lightgrey;
-    text-align: end;
-    font-size: 0.5rem;
-    padding-right: 10px;
-}
-
-.special-alngle {
-    position: absolute;
-    right:10px;
-    z-index: 3;
-    padding: 0.2rem;
 }
 
 .messageFunction {
@@ -214,6 +221,7 @@ a {
 
 }
 
+/* menù messaggi */
 .mFBTN {
     width: 100%;
     height: 100%;
@@ -223,6 +231,19 @@ a {
 
 .mFdivisor:hover {
     background-color: lightgray;
+}
+
+/* controlli in basso */
+/* ------------------ */
+
+.funControl *{
+    width: 1.5rem;
+    color: #b1b1b1;
+}
+
+.text {
+    margin-left: 1rem;
+    width: 100%;
 }
 
 .airplane{
@@ -237,4 +258,34 @@ a {
 
 .plane:hover {
     color: blue;
+}
+
+/* status */
+/* ------ */
+
+.status{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 5;
+}
+
+.left-status {
+    width: 30%;
+    border: 1px solid white;
+    height: 100%;
+    overflow: scroll;
+}
+
+/* status cell */
+.status-cell {
+    height: calc(100vh / 5);
+    width: 100%;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
