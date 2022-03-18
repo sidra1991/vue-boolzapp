@@ -7,24 +7,15 @@ const app = new Vue({
         answersRandom:[ "immagino","non ti conosco","perche mi parli","vai via","sei malvagio","piace anche a me","non saprei","che bella la vita","sono triste","so dove vivi","immaginavo che lo sapevi","si rispondo a caso","vivi la vida loca","i faggioli puzzano","non lo farò mai",],
         answers:'',
         inpSearch:'',
+        stasta : true,
         textToText:'',
         boolzappList:[
             {
                 id: 0,
-                user: 'io',
-                avatar: "img/avatar_io.jpg",
-                uTime: "12:00",
-                message: [
-                    {
-
-                    }
-                ],
-            },
-            {
-                id: 1,
                 user: "Michele",
                 avatar: "img/avatar_1.jpg",
                 uTime: "12:00",
+                stato :"https://picsum.photos/500/500?random=2",
                 message: [
                     {   
                         textOf : "userMessage",
@@ -47,34 +38,49 @@ const app = new Vue({
                 ],    
             },
             {
-                id: 2,
+                id: 1,
                 user: "fabio",
                 avatar: `img/avatar_2.jpg`,
                 uTime: "12:00",
+                stato : "https://picsum.photos/500/500?random=3",
                 message: [
 
                     {
+
+                    },
+                ],    
+            },
+            {
+                id: 2,
+                user: "samuele",
+                avatar: `img/avatar_3.jpg`,
+                uTime: "12:00",
+                stato : "https://picsum.photos/500/500?random=4",
+                message: [
+                    {
+
 
                     },
                 ],    
             },
             {
                 id: 3,
-                user: "samuele",
-                avatar: `img/avatar_3.jpg`,
+                user: "alessandro B.",
+                avatar: `img/avatar_4.jpg`,
                 uTime: "12:00",
+                stato : "https://picsum.photos/500/500?random=5",
                 message: [
                     {
-
 
                     },
                 ],    
             },
             {
                 id: 4,
-                user: "alessandro B.",
-                avatar: `img/avatar_4.jpg`,
+                user: "Alessandro L",
+                avatar: `img/avatar_5.jpg`,
                 uTime: "12:00",
+                stato :  "https://picsum.photos/500/500?random=6",
                 message: [
                     {
 
@@ -83,9 +89,10 @@ const app = new Vue({
             },
             {
                 id: 5,
-                user: "Alessandro L",
-                avatar: `img/avatar_5.jpg`,
+                user: "claudia",
+                avatar: `img/avatar_6.jpg`,
                 uTime: "12:00",
+                stato : "https://picsum.photos/500/500?random=7",
                 message: [
                     {
 
@@ -94,9 +101,10 @@ const app = new Vue({
             },
             {
                 id: 6,
-                user: "claudia",
-                avatar: `img/avatar_6.jpg`,
+                user: "Federico",
+                avatar: `img/avatar_7.jpg`,
                 uTime: "12:00",
+                stato : "https://picsum.photos/500/500?random=8",
                 message: [
                     {
 
@@ -105,20 +113,10 @@ const app = new Vue({
             },
             {
                 id: 7,
-                user: "Federico",
-                avatar: `img/avatar_7.jpg`,
-                uTime: "12:00",
-                message: [
-                    {
-
-                    },
-                ],    
-            },
-            {
-                id: 8,
                 user: "Davide",
                 avatar: `img/avatar_8.jpg`,
                 uTime: "12:00",
+                stato : "https://picsum.photos/500/500?random=9",
                 message: [
                     {
 
@@ -176,7 +174,11 @@ const app = new Vue({
             console.log(this.userFocus)
             console.log(index)
             console.log(this.boolzappList[userFocus].message[index])
-        }
+        },
+        openStatus(){
+            this.stasta = !this.stasta
+        },
+
     },
 });
 

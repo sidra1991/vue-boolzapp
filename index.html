@@ -16,20 +16,29 @@
             <div class="containerApp">
                 <div class="leftApp">
                     <div class="user">
+
+                        <!-- user -->
+
                         <div class="userContainer">
-                            <img class="avatar" src="img/avatar_1.jpg" alt="">
-                            <span>username</span>
+                            <img class="avatar" src="img/avatar_io.jpg" alt="">
+                            <span>rassegnato</span>
                         </div>
                         <div class="funControl">
-                            <i class="fa-solid fa-circle-notch"></i>
-                            <!-- <div class="status" >
+
+                            <!-- i stati -->
+                            <i class="fa-solid fa-circle-notch" @click="openStatus()" ></i>
+                            <div class="status" v-if="this.stasta == false" >
                                 <div class="left-status"  >
-                                    <div class="status-cell" v-for="(el, index) in boolzappList">
+                                    <i class="fa-solid fa-otter close-status " v-if="this.stasta == false" @click="openStatus()"> close </i>
+                                    <div class="status-cell" v-for="(el, index) in boolzappList" @click="cange(index)" >
                                         <img class="avatar" :src="boolzappList[index].avatar" alt="">
                                         <span>{{el.user}}</span>
                                     </div>
                                 </div>
-                            </div> -->
+                                <div class="right-status">
+                                    <img :src="boolzappList[userFocus].stato" alt="">
+                                </div>
+                            </div>
 
                             <i class="fa-solid fa-message"></i>
                             <i class="fa-solid fa-ellipsis-vertical"></i>
@@ -42,10 +51,15 @@
                             <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </div>
+
+
+                    <!-- motore di ricerca -->
                     <div class="search">
                         <button class="sebtn" type="button"> <i class="fa-solid fa-magnifying-glass"></i></button>
                         <input class="sebtn sein" type="text" placeholder="Cerca o inizia nuova chat" v-model="inpSearch">
                     </div>
+
+
 
                     <!-- lista amici -->
 
@@ -54,8 +68,8 @@
                             <div v-if="el.user.includes(inpSearch)" class="friend" @click="cange(index)" >
                                 <img class="avatar" :src="boolzappList[index].avatar" alt="">
                                 <div class="text">
-                                    <span>{{el.user}}</span>
-                                    <p class="ttxx"> ultimo messaggio alle ore  </p>
+                                    <p>{{el.user}}</p>
+                                    <span class="ttxx"> ultimo messaggio alle ore</span> 
                                 </div>
                                 <span class="time"> {{el.uTime}} </span>
                             </div>
@@ -63,7 +77,7 @@
                     </div>
                 </div>
 
-
+<!-- lato destro -->
                 <div class="rightApp">
 
                     <!-- con chi stai parlando -->
@@ -98,6 +112,8 @@
                         </div>
 
                     </div>
+
+                    <!-- scrivi messaggio -->
                     <div class="chatText">
                         <i class="fa-regular fa-face-smile"></i>
                         <div class="airplane" >
